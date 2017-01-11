@@ -1,0 +1,35 @@
+# Docs:
+http://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html
+
+# To set up a virtual environment, first install
+virtualenv
+virtualenvwrapper
+#Good luck. Read my notes in Install.
+#Basically,
+sudo pip install virtualenv
+sudo pip install virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
+# I wonder if I need to add this to my .bashrc file...
+# and maybe
+sudo ldconfig
+
+# Hey look, this didn't work as I expected.
+# Why mkvirtualenv first?
+mkvirtualenv <project>
+cd <project>
+# This step doesn't work. Can I still use it? Look into the docs and see if the command changed. I bet that it did.
+setprojectdir .
+deactivate
+workon helloworld
+
+This stores the virtual environment in a separate location.
+To list all virtual environments, use
+lsvirtualenv
+lsvirtualenv -b
+lsvirtualenv -l
+
+# This could be useful if you're moving a virtual environment around? Using it in several places? Would you ever do that?
+# To remove a virtual environment,
+rmvirtualenv ENVNAME
+
+# Actually, this looks pretty cool, but it's a bit much for me right now.
